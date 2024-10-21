@@ -1,6 +1,5 @@
 import Footer from "@/components/layouts/footer/footer";
 import AboutUs from "@/components/page/home/about/About";
-import WhatWeDO from "@/components/page/home/about/WhatWeDo";
 import BannerCarousel from "@/components/page/home/BannerCarousel";
 import CompanyProgress from "@/components/page/home/companyProgress/CompanyProgress";
 import News from "@/components/page/home/news/News";
