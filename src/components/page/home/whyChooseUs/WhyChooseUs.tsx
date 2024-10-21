@@ -25,10 +25,10 @@ const data = [
 
 const WhyChooseUs: React.FC = () => {
     return (
-        <div className="bg-white py-10 box-container flex items-center justify-center">
+        <div className="bg-white box-container py-[64px] flex items-center justify-center">
             <div className="max-w-[720px] lg:max-w-full">
 
-                <h2 className="text-center text-3xl font-bold text-theme mb-2">
+                <h2 className="text-center text-xl sm:text-3xl font-bold text-theme mb-2">
                     WHY CHOOSE US?
                 </h2>
                 <div className="flex items-center justify-center">

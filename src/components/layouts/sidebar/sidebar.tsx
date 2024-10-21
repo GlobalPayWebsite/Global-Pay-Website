@@ -30,6 +30,7 @@ const navLinks: NavLink[] = [
 ];
 
 const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, setIsSidebarOpen }) => {
+    
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };

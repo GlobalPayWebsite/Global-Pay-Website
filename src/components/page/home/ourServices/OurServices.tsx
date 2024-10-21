@@ -52,7 +52,7 @@ const servicesData = [
 
 const OurServices: React.FC = () => {
     return (
-        <div className="bg-background py-16 px-8">
+        <div className="bg-background py-[64px] px-8">
             <div className="max-w-7xl mx-auto text-center flex flex-col gap-5">
                 <h2 className="text-3xl font-extrabold text-theme">OUR SERVICES</h2>
                 <div className="text-lg text-gray-700 flex items-center justify-center">
