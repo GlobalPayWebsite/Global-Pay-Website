@@ -1,78 +1,50 @@
 "use client";
-import React from 'react';
-import NewsCard from '../../home/news/NewsCard';
 
-const news = [
+import React from 'react';
+import ServiceRow from '../../shared/servicesRow/ServiceRow';
+
+
+
+const data = [
     {
-        imageUrl: '/assets/jobplacement.jpg',
-        tag: 'Job',
-        tagColor: 'bg-theme',
         title: 'Job Placement Assistance',
+        subtitle: 'Your gateway to a successful career in Japan.',
         description: 'We specialize in helping individuals residing in Japan find suitable job opportunities. Our team works closely with employers to match candidates with positions that align with their skills and career goals.',
-        author: 'Admin',
-        date: 'October 9, 2025',
-        authorImage: 'https://example.com/author1.jpg',
-        icon: <i className="fa-solid fa-briefcase" />,
+        imgSrc: '/assets/jobplacement.jpg',
+        color: '#0088FF',
     },
     {
-        imageUrl: '/assets/nepali-students.jpg',
-        tag: 'International Students',
-        tagColor: 'bg-theme',
-        title: 'support-for-nepali-graduates',
+        title: 'Support for Nepali Graduates',
+        subtitle: 'Dedicated support for Nepali students.',
         description: 'We are dedicated to assisting Nepali individuals holding a bachelor’s degree who aspire to work in Japan.',
-        author: 'Admin',
-        date: 'October 9, 2025',
-        authorImage: 'https://example.com/author2.jpg',
-        icon: <i className="fa-solid fa-graduation-cap" />,
+        imgSrc: '/assets/nepali-students.jpg',
+        color: '#D62F1F',
     },
     {
-        imageUrl: '/assets/personalized-career.jpg',
-        tag: 'Career',
-        tagColor: 'bg-theme',
         title: 'Personalized Career Counseling',
+        subtitle: 'Expert advice for your career.',
         description: 'Our experienced counselors offer personalized career advice and support, helping candidates understand the job market, refine their resumes, and prepare for interviews.',
-        author: 'Admin',
-        date: 'October 9, 2025',
-        authorImage: 'https://example.com/author3.jpg',
-        icon: <i className="fa-solid fa-user-tie" />,
+        imgSrc: '/assets/personalized-career.jpg',
+        color: '#40BD00',
     },
     {
-        imageUrl: '/assets/partnership.jpg',
-        tag: 'Employer',
-        tagColor: 'bg-theme',
         title: 'Employer Partnerships',
+        subtitle: 'Exclusive job opportunities for candidates.',
         description: 'We have established strong partnerships with employers across industries in Japan, allowing us to offer candidates exclusive job opportunities.',
-        author: 'Admin',
-        date: 'October 9, 2025',
-        authorImage: 'https://example.com/author3.jpg',
-        icon: <i className="fa-regular fa-handshake" />,
+        imgSrc: '/assets/partnership.jpg',
+        color: '#F5AF41',
     },
 ];
 
 
 const Recruitment: React.FC = () => {
     return (
-        <div className="flex flex-col box-container py-[64px] bg-background">
-            <div className='flex flex-col w-full items-center'>
-                <h2 className="text-xl sm:text-3xl font-bold mb-3 text-theme">Recruitment</h2>
-                <p className="text-center mb-8 max-w-[720px]">
-                    We specialize in helping individuals residing in Japan find suitable job opportunities.
-                </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-                {news.map((card, index) => (
-                    <NewsCard
-                        key={index}
-                        imageUrl={card.imageUrl}
-                        tag={card.tag}
-                        tagColor={card.tagColor}
-                        title={card.title}
-                        description={card.description}
-                        icon={card.icon}
-                    />
-                ))}
-            </div>
+        <div>
+            <ServiceRow
+                title="Recruitment"
+                description="We specialize in helping individuals residing in Japan find suitable job opportunities."
+                serviceData={data}
+            />
         </div>
     );
 };

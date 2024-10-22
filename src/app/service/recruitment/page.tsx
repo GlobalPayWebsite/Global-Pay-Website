@@ -1,13 +1,13 @@
-// import Recruitment from "@/components/page/services/recruitment/Recruitment";
+import Recruitment from "@/components/page/services/recruitment/Recruitment";
+import Ssw from "@/components/page/services/recruitment/Ssw";
 import BreadCrumb from "@/components/page/shared/breadcrumb/BreadCrumb";
-import Cards from "@/components/page/shared/card/Card";
 
 export default function page() {
     return (
         <div className="">
             <BreadCrumb />
-            {/* <Recruitment /> */}
-            <Cards />
+            <Recruitment />
+            <Ssw />
         </div>
     );
 }
