@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                                 <li><Link href="/" className="hover:underline text-[#555555]">Home</Link></li>
                                 <li><Link href="/about-us" className="hover:underline text-[#555555]">About Us</Link></li>
                                 <li><Link href="/service/recruitment" className="hover:underline text-[#555555]">Recruitment Service</Link></li>
-                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Other Service</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Other Services</Link></li>
                                 <li><Link href="/contact" className="hover:underline text-[#555555]">Contact Us</Link></li>
                                 <li><Link href="/companyprofile" className="hover:underline text-[#555555]">Company Profile</Link></li>
                             </ul>
@@ -65,11 +65,11 @@ const Footer: React.FC = () => {
 
                     <div className='flex lg:justify-center'>
                         <div>
-                            <h4 className="font-semibold text-lg mb-2 text-[20px]">Legals</h4>
+                            <h4 className="font-semibold text-lg mb-2 text-[20px]">Legal</h4>
                             <ul className="text-[16px] space-y-2">
                                 <li><Link href="/privacy-policy" className="hover:underline text-[#555555]">Privacy Policy</Link></li>
                                 <li><Link href="/disclaimer" className="hover:underline text-[#555555]">Disclaimer</Link></li>
-                                <li><Link href="/use-of-site" className="hover:underline text-[#555555]">Use of this site</Link></li>
+                                <li><Link href="/use-of-site" className="hover:underline text-[#555555]">Use of This Site</Link></li>
                             </ul>
                             <div className="mt-4">
                                 <h5 className="font-bold text-[16px] mb-2">Follow Us</h5>
