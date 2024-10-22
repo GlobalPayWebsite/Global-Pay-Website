@@ -32,7 +32,7 @@ const teamMembers = [
 
 const Team: React.FC = () => {
     return (
-        <div className="flex flex-col box-container py-[64px]">
+        <div className="flex flex-col box-container py-[64px] bg-white">
             <div className='flex flex-col w-full items-center'>
                 <h2 className="text-xl sm:text-3xl font-bold mb-3 text-theme">Meet Our team</h2>
                 <p className="text-center mb-8 max-w-[720px]">

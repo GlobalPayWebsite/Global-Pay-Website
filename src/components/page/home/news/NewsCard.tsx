@@ -12,7 +12,7 @@ interface NewsCardProps {
 
 const NewsCard: React.FC<NewsCardProps> = ({ imageUrl, tagColor, title, description, icon }) => {
     return (
-        <div className="w-full bg-white border hover:shadow-md transition-all delay-100 cursor-pointer rounded-lg overflow-hidden">
+        <div className="w-full bg-white border hover:shadow-2xl transition-all delay-100 cursor-pointer rounded-lg overflow-hidden">
             <div className='w-full h-48 relative'>
                 <div className='w-full h-full absolute left-0 top-0 bg-[rgba(10,0,0,0.4)]' />
                 <Image unoptimized width={40} height={40} className="w-full h-full object-cover" src={imageUrl} alt={title} />

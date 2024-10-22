@@ -1,15 +1,14 @@
-import Footer from "@/components/layouts/footer/footer";
-import AboutUs from "@/components/page/home/about/About";
-import BannerCarousel from "@/components/page/home/BannerCarousel";
+import AboutUs from "@/components/page/shared/about/About";
+import BannerCarousel from "@/components/page/home/banner/BannerCarousel";
 import CompanyProgress from "@/components/page/home/companyProgress/CompanyProgress";
 import News from "@/components/page/home/news/News";
-import OurServices from "@/components/page/home/ourServices/OurServices";
-import Team from "@/components/page/home/team/Team";
+import OurServices from "@/components/page/shared/ourServices/OurServices";
+import Team from "@/components/page/shared/team/Team";
 import WhyChooseUs from "@/components/page/home/whyChooseUs/WhyChooseUs";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="">
+    <div>
       <BannerCarousel />
       <AboutUs />
       <OurServices />
@@ -17,7 +16,6 @@ export default function Home() {
       <CompanyProgress />
       <Team />
       <News />
-      <Footer />
     </div>
   );
 }

@@ -40,12 +40,12 @@ const Footer: React.FC = () => {
                         <div>
                             <h4 className="font-semibold text-lg mb-2 text-[20px]">Useful Links</h4>
                             <ul className="text-[16px] space-y-2">
-                                <li><Link href="#" className="hover:underline text-[#555555]">Home</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">About Us</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">Recruitment Service</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">Other Service</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">Contact Us</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">Company Profile</Link></li>
+                                <li><Link href="/" className="hover:underline text-[#555555]">Home</Link></li>
+                                <li><Link href="/about-us" className="hover:underline text-[#555555]">About Us</Link></li>
+                                <li><Link href="/service/recruitment" className="hover:underline text-[#555555]">Recruitment Service</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Other Service</Link></li>
+                                <li><Link href="/contact" className="hover:underline text-[#555555]">Contact Us</Link></li>
+                                <li><Link href="/companyprofile" className="hover:underline text-[#555555]">Company Profile</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -54,11 +54,11 @@ const Footer: React.FC = () => {
                         <div>
                             <h4 className="font-semibold text-lg mb-2 text-[20px]">Our Services</h4>
                             <ul className="text-[16px] space-y-2">
-                                <li><Link href="#" className="hover:underline text-[#555555]">Recruitment</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">SSW</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">Real Estate Consultant</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">Educational Consultant</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">Travel Consultant</Link></li>
+                                <li><Link href="/service/recruitment" className="hover:underline text-[#555555]">Recruitment</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">SSW</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Real Estate Consultant</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Educational Consultant</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Travel Consultant</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -67,16 +67,18 @@ const Footer: React.FC = () => {
                         <div>
                             <h4 className="font-semibold text-lg mb-2 text-[20px]">Legals</h4>
                             <ul className="text-[16px] space-y-2">
-                                <li><Link href="#" className="hover:underline text-[#555555]">Privacy Policy</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">Disclaimer</Link></li>
-                                <li><Link href="#" className="hover:underline text-[#555555]">Use of this site</Link></li>
+                                <li><Link href="/privacy-policy" className="hover:underline text-[#555555]">Privacy Policy</Link></li>
+                                <li><Link href="/disclaimer" className="hover:underline text-[#555555]">Disclaimer</Link></li>
+                                <li><Link href="/use-of-site" className="hover:underline text-[#555555]">Use of this site</Link></li>
                             </ul>
                             <div className="mt-4">
                                 <h5 className="font-bold text-[16px] mb-2">Follow Us</h5>
                                 <div className="flex space-x-4">
-                                    <a href="https://www.facebook.com/" target='_blank' className="w-[30px] h-[30px] transition-all delay-100 rounded-full flex items-center justify-center text-white hover:bg-blue-800 bg-blue-600"><i className="fab fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/" target='_blank' className="w-[30px] h-[30px] transition-all delay-100 rounded-full flex items-center justify-center text-white bg-pink-500 hover:bg-pink-700"><i className="fab fa-instagram"></i></a>
-                                    <a href="https://x.com/" target='_blank' className="w-[30px] h-[30px] transition-all delay-100 rounded-full flex items-center justify-center text-white bg-red-500 hover:bg-red-700"><i className="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/" target='_blank' className="w-[30px] h-[30px] transition-all delay-100 rounded-full flex items-center justify-center social-link-fb"><i className="fab fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/" target='_blank' className="w-[30px] h-[30px] transition-all delay-100 rounded-full flex items-center justify-center social-link-insta"><i className="fab fa-instagram"></i></a>
+                                    <a href="https://x.com/" target='_blank' className="w-[30px] h-[30px] transition-all delay-100 rounded-full flex items-center justify-center social-link-tw">
+                                        <i className="fa-brands fa-x-twitter"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>

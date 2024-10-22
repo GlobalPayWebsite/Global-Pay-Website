@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layouts/navbar/Navbar";
 import { ReduxProvider } from "@/rtk/ReduxProvider";
 import "../utils/multiLanguage"
+import Footer from "@/components/layouts/footer/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,7 +35,10 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-between`}
         >
           <Navbar />
-          {children}
+          <main>
+            {children}
+          </main>
+          <Footer />
         </body>
       </ReduxProvider>
     </html>

@@ -32,16 +32,16 @@ const WhatWeDO = () => {
             {services.map((service, index) => (
                 <div
                     key={index}
-                    className={`flex flex-col gap-3 items-center justify-between bg-white rounded-lg p-6 border-2 hover:shadow-md hover:border-theme `}
+                    className={`flex flex-col gap-3 items-center justify-between bg-white rounded-lg p-6 border-2 hover:shadow-2xl hover:border-theme `}
                 >
                     <div className="p-3 bg-background border-2 border-theme rounded-lg">
                         <Image src={service.iconUrl} alt={service.title} height={40} width={40} className='w-7 h-7 object-contain' />
                     </div>
                     <h3 className="text-xl font-semibold">{service.title}</h3>
                     <p className="text-gray-500 text-center text-xs">{service.description}</p>
-                    <button className="bg-theme text-white px-4 py-1 text-xs rounded-full hover:bg-red-600 transition">
+                    {/* <button className="bg-theme text-white px-4 py-1 text-xs rounded-full hover:bg-red-600 transition">
                         Learn More
-                    </button>
+                    </button> */}
                 </div>
             ))}
         </div>
