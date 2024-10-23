@@ -26,9 +26,9 @@ const banners = [
         "sub-heading_jp": "パートナー",
         "paragraph_jp": "Global Pay Co., Ltd. では、人材採用、不動産、教育コンサルティングにわたるシームレスなソリューションを提供しています。お客様のニーズに合わせたサービスで、成功への道をお手伝いいたします",
         "sub-tag_jp": "当社のサービスを探索する",
-        "image": "/assets/image.png",
+        "image": "/assets/global.jpg",
         "link": "/service/recruitment",
-        "imagePosition": "center"
+        "imagePosition": "object-top"
     },
     {
         "heading": "Real State",
@@ -39,9 +39,9 @@ const banners = [
         "sub-heading_jp": "パートナー",
         "paragraph_jp": "Global Pay Co., Ltd. では、人材採用、不動産、教育コンサルティングにわたるシームレスなソリューションを提供しています。お客様のニーズに合わせたサービスで、成功への道をお手伝いいたします",
         "sub-tag_jp": "当社のサービスを探索する",
-        "image": "https://media.licdn.com/dms/image/v2/D4E12AQGTKsPz71OGOg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1675643765898?e=2147483647&v=beta&t=771HYEfj74SzTpiyZQSzxVN6ULPIJNWBYbJEJVFXpd8",
+        "image": "/assets/realstate.png",
         "link": "/service/real-estate",
-        "imagePosition": "center"
+        "imagePosition": "object-center"
     },
     {
         "heading": "Abroad Education",
@@ -54,7 +54,7 @@ const banners = [
         "sub-tag_jp": "当社のサービスを探索する",
         "image": "https://ukvisasuccess.com/wp-content/uploads/2020/10/student-graduation-scaled.jpg",
         "link": "/service/education-consulting",
-        "imagePosition": "bottom"
+        "imagePosition": "object-bottom"
     },
 
 ]
@@ -108,7 +108,7 @@ export default function BannerCarousel() {
                                     </div>
                                 </div>
                             </div>
-                            <Image width={100} unoptimized={true} height={700} src={item.image || ""} className={`w-full h-[420px] object-cover ${"object-" + item.imagePosition}`} alt='banner' />
+                            <Image width={100} unoptimized={true} height={700} src={item.image || ""} className={`w-full h-[420px] object-cover ${item?.imagePosition || ""}`} alt='banner' />
                         </div>
                     </SwiperSlide>
                 ))}

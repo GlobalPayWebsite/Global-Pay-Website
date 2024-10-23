@@ -4,12 +4,13 @@ import WhatWeDO from './WhatWeDo';
 
 const AboutUs: React.FC = () => {
     return (
-        <section className="box-container py-[64px]">
+        <section className="box-container py-[64px] flex flex-col gap-5">
+            <h4 className="text-theme font-semibold mb-2 text-left text-4xl">About Us</h4>
+
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
                 {/* Text Section */}
                 <div className="w-full flex flex-col gap-5">
                     <div className='w-full'>
-                        <h4 className="text-theme text-lg font-semibold mb-2">About Us</h4>
                         <h1 className="text-4xl mb-4">
                             Meet our company unless miss the opportunity
                         </h1>
@@ -26,7 +27,7 @@ const AboutUs: React.FC = () => {
                                 <div>
                                     <h4 className="text-lg font-semibold">Year Of Expertise</h4>
                                     <p className="text-gray-600">
-                                       10+ Years
+                                        10+ Years
                                     </p>
                                 </div>
                             </div>
@@ -61,9 +62,9 @@ const AboutUs: React.FC = () => {
                     </div>
 
                     <div className='w-full flex flex-col gap-5'>
-                        <div className="w-full h-[200px]">
+                        <div className="w-full h-[400px]">
                             <Image
-                                src="/assets/about.png"
+                                src="/assets/about.jpg"
                                 alt="Business illustration"
                                 className="w-full h-full object-cover object-center"
                                 width={40}

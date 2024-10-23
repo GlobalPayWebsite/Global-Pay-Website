@@ -31,6 +31,7 @@ const NewsCard: React.FC<NewsCardProps> = ({details}) => {
                 </div>}
             </div>
             <div className="p-4 flex-1 flex-grow ">
+                <p className='text-xs'>{details._createdAt || ""}</p>
                 <h2 className="text-md font-bold mb-2">{details?.title || ""}</h2>
                 <p className="text-gray-600 text-sm">{details?.description ? details?.description?.substring(0,100) + "..." : ""}</p>
             </div>

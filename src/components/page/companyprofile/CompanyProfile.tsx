@@ -15,7 +15,7 @@ const CompanyProfile: React.FC = () => {
                 </div> */}
 
                 <div className="mb-6 flex items-center gap-3">
-                    <div className="rounded-full bg-black p-2">
+                    <div className="rounded-full p-2">
                         <img src="/assets/logo.png" alt="Global Pay Logo" className="w-10 h-10 sm:w-20 sm:h-20 rounded-full" />
                     </div>
                     <div>

@@ -5,6 +5,7 @@ import News from "@/components/page/home/news/News";
 import OurServices from "@/components/page/shared/ourServices/OurServices";
 // import Team from "@/components/page/shared/team/Team";
 import WhyChooseUs from "@/components/page/home/whyChooseUs/WhyChooseUs";
+import CeoMessage from "@/components/page/home/ceomessage/Ceo";
 
 export default function Page() {
   return (
@@ -14,7 +15,8 @@ export default function Page() {
       <OurServices />
       <WhyChooseUs />
       <CompanyProgress />
-      {/* <Team /> */}
+
+      <CeoMessage />
       <News />
     </div>
   );

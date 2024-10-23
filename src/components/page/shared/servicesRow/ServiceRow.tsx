@@ -9,9 +9,10 @@ import Link from 'next/link';
 interface ServiceCardProps {
     details: DetailType;
     detailsList: DetailType[];
+    length?: number;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ details, detailsList }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ details, detailsList, length = 0 }) => {
     return (
         <Link
             href={{
@@ -26,10 +27,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ details, detailsList }) => {
             className={`relative w-full h-full mb-10 projcard rounded-lg bg-white group border-gray-300  hover:-translate-y-1 transition-all ease-in-out`}>
             <div className="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-r from-gray-600 to-transparent opacity-5"></div>
             <div className="relative h-full flex flex-col sm:flex-row">
-                <div className='hidden sm:block rounded-lg h-[200px] sm:h-full w-full sm:w-[200px] overflow-hidden projcard-img-box'>
+                <div className={`hidden sm:block rounded-lg h-[200px] sm:h-full w-full ${length < 2 ? "sm:w-[400px]" : "sm:w-[200px]"} overflow-hidden projcard-img-box`}>
                     <Image unoptimized height={200} width={200} className="h-full w-full object-cover object-center transform transition-transform duration-200 group-hover:scale-105 group-hover:rotate-1" src={details?.image || ""} alt={details?.title || ""} />
                 </div>
-                <div className='sm:hidden rounded-lg h-[200px] sm:h-full w-full sm:w-[200px] overflow-hidden'>
+                <div className={`sm:hidden rounded-lg h-[200px] sm:h-full w-full ${length < 2 ? "sm:w-[300px]" : "sm:w-[200px]"} overflow-hidden`}>
                     <Image unoptimized height={200} width={200} className="h-full w-full object-cover object-center transform transition-transform duration-200 group-hover:scale-105 group-hover:rotate-1" src={details?.image || ""} alt={details?.title || ""} />
                 </div>
                 <div className="p-5 flex-1">
@@ -67,6 +68,7 @@ const ServiceRow: React.FC<ServiceRowProps> = ({ title, description, serviceData
                         key={index}
                         details={item}
                         detailsList={serviceData}
+                        length={serviceData?.length || 0}
                     />
                 ))}
             </div>

@@ -17,8 +17,8 @@ const Details = ({ details, detailsList }: DetailsProps) => {
     return (
         <>
             <section className='box-container py-[64px]'>
-                <div className="flex flex-col lg:flex-row items-start justify-center gap-10">
-                    <div className='w-full flex-1'>
+                <div className={`flex flex-col lg:flex-row items-start justify-center gap-10`}>
+                    <div className={`w-full flex-1`}>
                         <div className='pb-5'>
                             <div className='flex flex-col justify-center gap-5'>
                                 <h2 style={{ margin: 0 }} className='my-2 text-4xl font-semibold'>
@@ -80,7 +80,7 @@ const Details = ({ details, detailsList }: DetailsProps) => {
                         </div>
                     </div>
 
-                    {detailsList && detailsList?.length > 0 && <div className='w-full flex flex-col items-center justify-between gap-5 sm:gap-3 flex-1'>
+                    {detailsList && detailsList?.length < 1 ? <div className='w-full flex flex-col items-center justify-between gap-5 sm:gap-3 flex-1'>
                         <div className='w-full mb-5'>
                             <h1 className='text-3xl font-semibold'>{toggleLanguage({ i18Txt: "Related Topics" })}</h1>
                         </div>
@@ -93,7 +93,11 @@ const Details = ({ details, detailsList }: DetailsProps) => {
                                 />
                             ))}
                         </div>
-                    </div>}
+                    </div> : (
+                        <div className='w-full flex flex-col items-center justify-between gap-5 sm:gap-3 flex-1'>
+                            
+                        </div>
+                    )}
 
                 </div>
             </section>

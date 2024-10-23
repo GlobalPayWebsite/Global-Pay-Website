@@ -39,7 +39,7 @@ export const newsList: DetailType[] = [
         extraDescription_jp: '', // Add extra Japanese description if necessary
         image: '/assets/nepali-students.jpg',
         extraImage: '', // Add extra image if available
-        _createdAt: 'October 9, 2025',
+        _createdAt: 'October 10, 2025',
         icon: <i className="fa-solid fa-graduation-cap" />
     },
     {
@@ -69,7 +69,22 @@ export const newsList: DetailType[] = [
         extraDescription_jp: '', // Add extra Japanese description if necessary
         image: '/assets/partnership.jpg',
         extraImage: '', // Add extra image if available
-        _createdAt: 'October 9, 2025',
+        _createdAt: 'November 11, 2025',
+        icon: <i className="fa-regular fa-handshake" />
+    },
+    {
+        _id: '5',
+        title: 'Employer Partnerships',
+        title_jp: '', // Add Japanese translation if available
+        category: 'Employer',
+        category_jp: '', // Add Japanese translation if available
+        description: 'We have established strong partnerships with employers across industries in Japan, allowing us to offer candidates exclusive job opportunities.',
+        description_jp: '', // Add Japanese translation if available
+        extraDescription: '', // Add extra description if necessary
+        extraDescription_jp: '', // Add extra Japanese description if necessary
+        image: '/assets/partnership.jpg',
+        extraImage: '', // Add extra image if available
+        _createdAt: 'September 9, 2025',
         icon: <i className="fa-regular fa-handshake" />
     },
 ];
