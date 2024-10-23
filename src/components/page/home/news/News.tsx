@@ -1,7 +1,15 @@
 "use client";
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import NewsCard from './NewsCard';
 import { DetailType } from '@/typing';
+import { Navigation, Pagination } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import './news.css'
 
 export const newsList: DetailType[] = [
     {
@@ -69,7 +77,7 @@ export const newsList: DetailType[] = [
 
 const News: React.FC = () => {
     return (
-        <div className="flex flex-col box-container py-[64px] bg-background">
+        <div className="flex flex-col box-container pt-[64px] bg-background">
             <div className='flex flex-col w-full items-center'>
                 <h2 className="text-xl sm:text-3xl font-bold mb-3 text-theme">News and Updates</h2>
                 <p className="text-center mb-8 max-w-[720px]">
@@ -77,14 +85,37 @@ const News: React.FC = () => {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+            {/* Swiper Carousel */}
+            <Swiper
+                modules={[Pagination, Navigation]}
+                spaceBetween={20} // Space between slides
+                slidesPerView={1} // Initially, show one slide
+                breakpoints={{
+                    640: {
+                        slidesPerView: 1, // For mobile screens
+                    },
+                    768: {
+                        slidesPerView: 2, // For tablets
+                    },
+                    1024: {
+                        slidesPerView: 2, // For desktops
+                    },
+                    1280: {
+                        slidesPerView: 4, // For large desktops
+                    }
+                }}
+                pagination={{ clickable: true,
+                 }}
+                navigation={true}
+                loop={true}
+                className="w-full pb-20"
+            >
                 {newsList.map((details, index) => (
-                    <NewsCard
-                        key={index}
-                        details={details}
-                    />
+                    <SwiperSlide key={index} className='flex w-full bg-white border hover:shadow-2xl transition-all delay-100 cursor-pointer rounded-lg overflow-hidden'>
+                        <NewsCard details={details} />
+                    </SwiperSlide>
                 ))}
-            </div>
+            </Swiper>
         </div>
     );
 };
