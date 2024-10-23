@@ -1,51 +1,68 @@
 "use client";
 import React from 'react';
 import NewsCard from './NewsCard';
+import { DetailType } from '@/typing';
 
-const news = [
+export const newsList: DetailType[] = [
     {
-        imageUrl: '/assets/jobplacement.jpg',
-        tag: 'Job',
-        tagColor: 'bg-theme',
+        _id: '1',
         title: 'Job Placement Assistance',
+        title_jp: '', // Add Japanese translation if available
+        category: 'Job',
+        category_jp: '', // Add Japanese translation if available
         description: 'We specialize in helping individuals residing in Japan find suitable job opportunities. Our team works closely with employers to match candidates with positions that align with their skills and career goals.',
-        author: 'Admin',
-        date: 'October 9, 2025',
-        authorImage: 'https://example.com/author1.jpg',
-        icon: <i className="fa-solid fa-briefcase" />,
+        description_jp: '', // Add Japanese translation if available
+        extraDescription: '', // Add extra description if necessary
+        extraDescription_jp: '', // Add extra Japanese description if necessary
+        image: '/assets/jobplacement.jpg',
+        extraImage: '', // Add extra image if available
+        _createdAt: 'October 9, 2025',
+        icon: <i className="fa-solid fa-briefcase" />
     },
     {
-        imageUrl: '/assets/nepali-students.jpg',
-        tag: 'International Students',
-        tagColor: 'bg-theme',
-        title: 'support-for-nepali-graduates',
+        _id: '2',
+        title: 'Support for Nepali Graduates',
+        title_jp: '', // Add Japanese translation if available
+        category: 'International Students',
+        category_jp: '', // Add Japanese translation if available
         description: 'We are dedicated to assisting Nepali individuals holding a bachelor’s degree who aspire to work in Japan.',
-        author: 'Admin',
-        date: 'October 9, 2025',
-        authorImage: 'https://example.com/author2.jpg',
-        icon: <i className="fa-solid fa-graduation-cap" />,
+        description_jp: '', // Add Japanese translation if available
+        extraDescription: '', // Add extra description if necessary
+        extraDescription_jp: '', // Add extra Japanese description if necessary
+        image: '/assets/nepali-students.jpg',
+        extraImage: '', // Add extra image if available
+        _createdAt: 'October 9, 2025',
+        icon: <i className="fa-solid fa-graduation-cap" />
     },
     {
-        imageUrl: '/assets/personalized-career.jpg',
-        tag: 'Career',
-        tagColor: 'bg-theme',
+        _id: '3',
         title: 'Personalized Career Counseling',
+        title_jp: '', // Add Japanese translation if available
+        category: 'Career',
+        category_jp: '', // Add Japanese translation if available
         description: 'Our experienced counselors offer personalized career advice and support, helping candidates understand the job market, refine their resumes, and prepare for interviews.',
-        author: 'Admin',
-        date: 'October 9, 2025',
-        authorImage: 'https://example.com/author3.jpg',
-        icon: <i className="fa-solid fa-user-tie" />,
+        description_jp: '', // Add Japanese translation if available
+        extraDescription: '', // Add extra description if necessary
+        extraDescription_jp: '', // Add extra Japanese description if necessary
+        image: '/assets/personalized-career.jpg',
+        extraImage: '', // Add extra image if available
+        _createdAt: 'October 9, 2025',
+        icon: <i className="fa-solid fa-user-tie" />
     },
     {
-        imageUrl: '/assets/partnership.jpg',
-        tag: 'Employer',
-        tagColor: 'bg-theme',
+        _id: '4',
         title: 'Employer Partnerships',
+        title_jp: '', // Add Japanese translation if available
+        category: 'Employer',
+        category_jp: '', // Add Japanese translation if available
         description: 'We have established strong partnerships with employers across industries in Japan, allowing us to offer candidates exclusive job opportunities.',
-        author: 'Admin',
-        date: 'October 9, 2025',
-        authorImage: 'https://example.com/author3.jpg',
-        icon: <i className="fa-regular fa-handshake" />,
+        description_jp: '', // Add Japanese translation if available
+        extraDescription: '', // Add extra description if necessary
+        extraDescription_jp: '', // Add extra Japanese description if necessary
+        image: '/assets/partnership.jpg',
+        extraImage: '', // Add extra image if available
+        _createdAt: 'October 9, 2025',
+        icon: <i className="fa-regular fa-handshake" />
     },
 ];
 
@@ -61,15 +78,10 @@ const News: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-                {news.map((card, index) => (
+                {newsList.map((details, index) => (
                     <NewsCard
                         key={index}
-                        imageUrl={card.imageUrl}
-                        tag={card.tag}
-                        tagColor={card.tagColor}
-                        title={card.title}
-                        description={card.description}
-                        icon={card.icon}
+                        details={details}
                     />
                 ))}
             </div>
