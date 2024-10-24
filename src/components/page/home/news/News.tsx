@@ -26,7 +26,8 @@ export const newsList: DetailType[] = [
         image: '/assets/jobplacement.jpg',
         extraImage: '', // Add extra image if available
         _createdAt: 'October 9, 2025',
-        icon: <i className="fa-solid fa-briefcase" />
+        icon: <i className="fa-solid fa-briefcase" />,
+        isNews: true
     },
     {
         _id: '2',
@@ -41,7 +42,8 @@ export const newsList: DetailType[] = [
         image: '/assets/nepali-students.jpg',
         extraImage: '', // Add extra image if available
         _createdAt: 'October 10, 2025',
-        icon: <i className="fa-solid fa-graduation-cap" />
+        icon: <i className="fa-solid fa-graduation-cap" />,
+        isNews: true
     },
     {
         _id: '3',
@@ -56,7 +58,8 @@ export const newsList: DetailType[] = [
         image: '/assets/personalized-career.jpg',
         extraImage: '', // Add extra image if available
         _createdAt: 'October 9, 2025',
-        icon: <i className="fa-solid fa-user-tie" />
+        icon: <i className="fa-solid fa-user-tie" />,
+        isNews: true
     },
     {
         _id: '4',
@@ -71,7 +74,8 @@ export const newsList: DetailType[] = [
         image: '/assets/partnership.jpg',
         extraImage: '', // Add extra image if available
         _createdAt: 'November 11, 2025',
-        icon: <i className="fa-regular fa-handshake" />
+        icon: <i className="fa-regular fa-handshake" />,
+        isNews: true
     },
     {
         _id: '5',
@@ -86,7 +90,8 @@ export const newsList: DetailType[] = [
         image: '/assets/partnership.jpg',
         extraImage: '', // Add extra image if available
         _createdAt: 'September 9, 2025',
-        icon: <i className="fa-regular fa-handshake" />
+        icon: <i className="fa-regular fa-handshake" />,
+        isNews: true
     },
 ];
 

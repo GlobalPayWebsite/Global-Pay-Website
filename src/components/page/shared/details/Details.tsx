@@ -13,7 +13,8 @@ interface DetailsProps {
     detailsList: DetailType[]
 }
 const Details = ({ details, detailsList }: DetailsProps) => {
-    const { toggleLanguage } = useToggleLanguageConversion()
+    const { toggleLanguage } = useToggleLanguageConversion();
+    console.log("detailsList", detailsList)
     return (
         <>
             <section className='box-container py-[64px]'>
@@ -27,7 +28,7 @@ const Details = ({ details, detailsList }: DetailsProps) => {
                                 {/* <p className='text-gray-500'>Amidst the turmoil, Elon Musk-owned microblogging platform Twitter might soon introduce more features that are just limited to its Blue subscribers. According to reports, Twitter Blue paid subscribers will soon be able to hide the like button.......</p> */}
                             </div>
                             <div className='mt-5 flex items-start justify-between gap-5'>
-                                <IntroCard date={details?._createdAt?.toString() || ""} title={toggleLanguage({
+                                <IntroCard showDate={details?.isNews} date={details?._createdAt?.toString() || ""} title={toggleLanguage({
                                     engTxt: details?.category || "",
                                     japTxt: details?.category_jp || ""
                                 }) as string || ""} />
@@ -80,9 +81,9 @@ const Details = ({ details, detailsList }: DetailsProps) => {
                         </div>
                     </div>
 
-                    {detailsList && detailsList?.length < 1 ? <div className='w-full flex flex-col items-center justify-between gap-5 sm:gap-3 flex-1'>
+                    <div className='w-full flex flex-col items-center justify-between gap-5 sm:gap-3 flex-1'>
                         <div className='w-full mb-5'>
-                            <h1 className='text-3xl font-semibold'>{toggleLanguage({ i18Txt: "Related Topics" })}</h1>
+                            {detailsList?.length > 1 && <h1 className='text-3xl font-semibold'>{toggleLanguage({ i18Txt: "Related Topics" })}</h1>}
                         </div>
                         <div className=" lg:max-h-[700px] overflow-y-auto w-full flex flex-col items-center justify-between gap-5 sm:gap-3 flex-1">
                             {detailsList?.filter(item => item._id !== details?._id)?.map((item) => (
@@ -93,12 +94,7 @@ const Details = ({ details, detailsList }: DetailsProps) => {
                                 />
                             ))}
                         </div>
-                    </div> : (
-                        <div className='w-full flex flex-col items-center justify-between gap-5 sm:gap-3 flex-1'>
-                            
-                        </div>
-                    )}
-
+                    </div>
                 </div>
             </section>
         </>

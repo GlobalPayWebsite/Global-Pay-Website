@@ -10,6 +10,7 @@ export interface DetailType {
     description_jp: string;
     extraDescription: string;
     extraDescription_jp: string;
+    isNews?: boolean;
     image: string;
     icon?: React.ReactNode;
     extraImage: string;

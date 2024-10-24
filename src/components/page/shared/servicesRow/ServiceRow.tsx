@@ -19,11 +19,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, details, detailsList, 
     const whileInView = index % 2 == 1 ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 };
     return (
         <motion.div
-            className='w-full'
+            className='w-full hover:shadow-lg border'
             initial={initial}
             whileInView={whileInView}
             whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            transition={{ duration: 0.4 }}
         >
             <Link
                 href={{

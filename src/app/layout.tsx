@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <ReduxProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-between`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-between overflow-x-hidden`}
         >
           <Navbar />
             {children}

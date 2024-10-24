@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const CompanyProfile: React.FC = () => {
@@ -16,7 +17,7 @@ const CompanyProfile: React.FC = () => {
 
                 <div className="mb-6 flex items-center gap-3">
                     <div className="rounded-full p-2">
-                        <img src="/assets/logo.png" alt="Global Pay Logo" className="w-10 h-10 sm:w-20 sm:h-20 rounded-full" />
+                        <Image width={20} height={20} unoptimized src="/assets/logo.png" alt="Global Pay Logo" className="w-10 h-10 sm:w-20 sm:h-20 rounded-full" />
                     </div>
                     <div>
                         <h1 className="text-xl sm:text-2xl font-bold text-theme ">GLOBAL PAY Co., Ltd.</h1>
@@ -29,7 +30,7 @@ const CompanyProfile: React.FC = () => {
                     <p className="text-sm"><strong>Establishment Date:</strong> April 20, 2021</p>
                     <p className="text-sm"><strong>Representative:</strong> Neure Nabin</p>
                     <p className="text-sm"><strong>Capital:</strong> 10 million yen</p>
-                    <p className="text-sm"><strong>Number of Employees:</strong> 4</p>
+                    {/* <p className="text-sm"><strong>Number of Employees:</strong> 4</p> */}
                 </div>
 
                 <div className="mt-6">
