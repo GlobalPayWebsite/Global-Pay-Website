@@ -109,7 +109,7 @@ const News: React.FC = () => {
             {/* Swiper Carousel */}
             <motion.div
                 className='w-full'
-                initial={{ opacity: 0, y: 500 }}
+                initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
             >
