@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const data = [
     {
@@ -26,21 +29,35 @@ const data = [
 const WhyChooseUs: React.FC = () => {
     return (
         <div className="bg-white box-container py-[64px] flex items-center justify-center">
-            <div className="max-w-[720px] lg:max-w-full">
+            <div
+                className="max-w-[720px] lg:max-w-full"
 
-                <h2 className="text-center text-xl sm:text-3xl font-bold text-theme mb-2">
-                    WHY CHOOSE US?
-                </h2>
-                <div className="flex items-center justify-center">
-                    <p className="text-center text-lg text-dark mb-10">
-                        We offer exceptional services and personalized support, guiding you every step of the way.
-                    </p>
-                </div>
+            >
+                <motion.div
+                    initial={{ opacity: 0, y: -100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.2 }}
+                >
+                    <h2 className="text-center text-xl sm:text-3xl font-bold text-theme mb-2">
+                        WHY CHOOSE US?
+                    </h2>
+                    <div className="flex items-center justify-center">
+                        <p className="text-center text-lg text-dark mb-10">
+                            We offer exceptional services and personalized support, guiding you every step of the way.
+                        </p>
+                    </div>
+                </motion.div>
 
                 <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-5 items-center">
                     <div className="space-y-6">
                         {data.map((item, index) => (
-                            <div key={index} className="flex items-start">
+                            <motion.div
+                                key={index}
+                                className="flex items-start"
+                                initial={{ opacity: 0, x: -100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.7, delay: 0.2 }}
+                            >
                                 <div className="bg-success rounded-full p-2.5 mr-4">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -63,18 +80,26 @@ const WhyChooseUs: React.FC = () => {
                                         {item?.description || ""}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
 
                     <div className="flex justify-center items-start w-full">
-                        <div className="border p-2 w-full">
-                            <img
+                        <motion.div
+                            className="border p-2 w-full"
+                            initial={{ opacity: 0, x: 100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
+                        >
+                            <Image
                                 src="/assets/whyus.jpg" // Replace this with the correct path for your image
                                 alt="Why Choose Us"
                                 className="w-full h-full object-cover"
+                                width={500}
+                                height={500}
+                                unoptimized
                             />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

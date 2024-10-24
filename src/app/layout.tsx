@@ -35,9 +35,7 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-between`}
         >
           <Navbar />
-          <main>
             {children}
-          </main>
           <Footer />
         </body>
       </ReduxProvider>

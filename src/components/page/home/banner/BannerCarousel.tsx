@@ -11,6 +11,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useToggleLanguageConversion } from '@/utils/hooks/hooks';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 
 
@@ -81,7 +82,12 @@ export default function BannerCarousel() {
                         <div className='w-full h-[100vh] md:h-[800px]'>
                             <div className='absolute top-0 left-0 bg-[rgba(10,0,0,0.4)] w-full h-full'>
                                 <div className='box-container py-5 flex items-center justify-start h-full '>
-                                    <div className='w-[720px] text-white flex flex-col gap-2'>
+                                    <motion.div
+                                        className='w-[720px] text-white flex flex-col gap-2'
+                                        initial={{ opacity: 0, y: -100 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.9, delay: 0.4 }}
+                                    >
                                         <h1 className='text-[3rem] lg:text-[3.5rem] leading-tight font-[700]'>
                                             <span>{toggleLanguage({
                                                 engTxt: item['heading'],
@@ -105,7 +111,7 @@ export default function BannerCarousel() {
                                                 })}
                                             </Link>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                             <Image width={100} unoptimized={true} height={700} src={item.image || ""} className={`w-full h-[420px] object-cover ${item?.imagePosition || ""}`} alt='banner' />

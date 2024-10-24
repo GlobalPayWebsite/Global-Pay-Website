@@ -1,22 +1,40 @@
+"use client";
 import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface CeoMessageProps {
   bg?: boolean;
 }
-const CeoMessage: React.FC<CeoMessageProps> = ({bg = false}) => {
+const CeoMessage: React.FC<CeoMessageProps> = ({ bg = false }) => {
   return (
     <div className={`box-container py-[64px] ${bg && "bg-background"}`}>
-      <h2 className="text-3xl font-extrabold text-theme text-center mb-20">Message from CEO</h2>
+      <motion.h1
+        className="text-3xl font-extrabold text-theme text-center mb-20"
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
+        Message from CEO
+      </motion.h1>
 
-      <div className='flex items-center justify-center w-full'>
+      <motion.div
+        className='flex items-center justify-center w-full'
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
         <div className="relative bg-white rounded-lg shadow-lg p-5 border max-w-[1024px]">
           {/* Profile Image */}
           <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
             <div>
-              <img
+              <Image
                 src="/assets/ceo.jpg"
                 alt="Person"
                 className="w-32 h-32 rounded-full border border-black  object-cover"
+                width={128}
+                height={128}
+                unoptimized
               />
             </div>
             <p className='text-center text-lg font-semibold'>CEO Nabin Neure</p>
@@ -45,7 +63,7 @@ const CeoMessage: React.FC<CeoMessageProps> = ({bg = false}) => {
 
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

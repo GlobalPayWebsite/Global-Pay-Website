@@ -1,5 +1,7 @@
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+
 
 const services = [
     {
@@ -30,9 +32,11 @@ const WhatWeDO = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-                <div
+                <motion.div
                     key={index}
                     className={`flex flex-col gap-3 items-center bg-white rounded-lg p-6 border-2 hover:shadow-2xl hover:border-theme `}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                 >
                     <div className="p-3 bg-background border-2 border-theme rounded-lg">
                         <Image src={service.iconUrl} alt={service.title} height={40} width={40} className='w-7 h-7 object-contain' />
@@ -42,7 +46,7 @@ const WhatWeDO = () => {
                     {/* <button className="bg-theme text-white px-4 py-1 text-xs rounded-full hover:bg-red-600 transition">
                         Learn More
                     </button> */}
-                </div>
+                </motion.div>
             ))}
         </div>
     );

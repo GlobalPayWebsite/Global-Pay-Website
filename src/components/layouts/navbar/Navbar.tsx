@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <header className='box-container py-[14px] bg-background'>
+      <header className='sticky top-0 left-0 z-40 shadow-xl box-container py-[14px] bg-background'>
         <nav className="flex items-center justify-between">
 
           {/* Left Side: Logo */}
