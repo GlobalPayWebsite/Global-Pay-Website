@@ -10,7 +10,9 @@ export default async function page({ searchParams }: { searchParams: { item: str
     const detailsList = data?.detailsList as DetailType[];
 
     return (
-        <Details details={details} detailsList={detailsList} />
+        <div className="m-0 p-0 box-border">
+            <Details details={details} detailsList={detailsList} />
+        </div>
     )
 }
 

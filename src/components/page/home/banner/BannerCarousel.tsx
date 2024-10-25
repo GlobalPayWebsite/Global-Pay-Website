@@ -64,14 +64,14 @@ const banners = [
 export default function BannerCarousel() {
     const { toggleLanguage } = useToggleLanguageConversion();
     return (
-        <>
+        <div className='w-full'>
             <Swiper pagination={{
                 clickable: true,
                 bulletClass: 'custom-bullet',
                 bulletActiveClass: 'custom-bullet-active',
             }}
                 modules={[Pagination, Autoplay]}
-                className="mySwiper pb-10 h-[420px] "
+                className="mySwiper pb-10 h-[420px] w-full overflow-x-hidden"
                 autoplay={{
                     delay: 3000, // 3 seconds
                     disableOnInteraction: false,
@@ -119,6 +119,6 @@ export default function BannerCarousel() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </>
+        </div>
     );
 }

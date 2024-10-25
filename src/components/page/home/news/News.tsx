@@ -25,7 +25,7 @@ export const newsList: DetailType[] = [
         extraDescription_jp: '', // Add extra Japanese description if necessary
         image: '/assets/jobplacement.jpg',
         extraImage: '', // Add extra image if available
-        _createdAt: 'October 9, 2025',
+        _createdAt: 'October 9, 2024',
         icon: <i className="fa-solid fa-briefcase" />,
         isNews: true
     },
@@ -41,7 +41,7 @@ export const newsList: DetailType[] = [
         extraDescription_jp: '', // Add extra Japanese description if necessary
         image: '/assets/nepali-students.jpg',
         extraImage: '', // Add extra image if available
-        _createdAt: 'October 10, 2025',
+        _createdAt: 'October 10, 2024',
         icon: <i className="fa-solid fa-graduation-cap" />,
         isNews: true
     },
@@ -57,7 +57,7 @@ export const newsList: DetailType[] = [
         extraDescription_jp: '', // Add extra Japanese description if necessary
         image: '/assets/personalized-career.jpg',
         extraImage: '', // Add extra image if available
-        _createdAt: 'October 9, 2025',
+        _createdAt: 'October 11, 2024',
         icon: <i className="fa-solid fa-user-tie" />,
         isNews: true
     },
@@ -73,7 +73,7 @@ export const newsList: DetailType[] = [
         extraDescription_jp: '', // Add extra Japanese description if necessary
         image: '/assets/partnership.jpg',
         extraImage: '', // Add extra image if available
-        _createdAt: 'November 11, 2025',
+        _createdAt: 'October 13, 2024',
         icon: <i className="fa-regular fa-handshake" />,
         isNews: true
     },
@@ -89,7 +89,7 @@ export const newsList: DetailType[] = [
         extraDescription_jp: '', // Add extra Japanese description if necessary
         image: '/assets/partnership.jpg',
         extraImage: '', // Add extra image if available
-        _createdAt: 'September 9, 2025',
+        _createdAt: 'October 14, 2024',
         icon: <i className="fa-regular fa-handshake" />,
         isNews: true
     },
@@ -98,7 +98,7 @@ export const newsList: DetailType[] = [
 
 const News: React.FC = () => {
     return (
-        <div className="flex flex-col box-container pt-[64px] bg-background">
+        <div className="flex flex-col box-container pt-[64px] bg-background overflow-hidden">
             <motion.div
                 className='flex flex-col w-full items-center'
                 initial={{ opacity: 0, y: -100 }}

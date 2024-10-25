@@ -28,7 +28,7 @@ const data = [
 
 const WhyChooseUs: React.FC = () => {
     return (
-        <div className="bg-white box-container py-[64px] flex items-center justify-center">
+        <div className="bg-white box-container py-[64px] flex items-center justify-center w-full overflow-x-hidden">
             <div
                 className="max-w-[720px] lg:max-w-full"
 

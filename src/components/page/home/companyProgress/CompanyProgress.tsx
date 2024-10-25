@@ -33,7 +33,7 @@ const CompanyProgress: React.FC = () => {
     }
     return (
         <div
-            className="flex flex-col box-container py-[64px] bg-background"
+            className="flex flex-col box-container py-[64px] bg-background w-full h-fit overflow-hidden"
         >
             <motion.div
                 className='flex flex-col w-full items-center'
@@ -47,7 +47,7 @@ const CompanyProgress: React.FC = () => {
                 </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full h-fit">
                 {data.map((item, index) => (
                     <motion.div
                         key={index}

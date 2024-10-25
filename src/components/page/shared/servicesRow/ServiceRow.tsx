@@ -67,7 +67,7 @@ interface ServiceRowProps {
 
 const ServiceRow: React.FC<ServiceRowProps> = ({ title, description, serviceData, bg = false }) => {
     return (
-        <div className={`flex flex-col box-container py-[64px] ${bg && "bg-background"}`}>
+        <div className={`flex flex-col box-container py-[64px] overflow-x-hidden ${bg && "bg-background"}`}>
             <motion.div
                 className='flex flex-col items-center w-full'
                 initial={{ opacity: 0, y: -100 }}

@@ -5,22 +5,13 @@ const CompanyProfile: React.FC = () => {
     return (
         <div className="flex items-center justify-center bg-gray-100 box-container py-[64px]">
             <div className="bg-white shadow-lg rounded-lg p-8 max-w-[720px] w-full">
-                {/* <div className="mb-6 flex flex-col items-center gap-3">
-                    <div className="rounded-full bg-black p-2">
-                        <img src="/assets/logo.png" alt="Global Pay Logo" className="w-20 h-20 rounded-full" />
-                    </div>
-                    <div>
-                        <h1 className="text-2xl font-bold text-theme text-center">GLOBAL PAY Co., Ltd.</h1>
-                        <p className="text-gray-600 text-center">Empowering Your Global Opportunities</p>
-                    </div>
-                </div> */}
 
                 <div className="mb-6 flex items-center gap-3">
                     <div className="rounded-full p-2">
                         <Image width={20} height={20} unoptimized src="/assets/logo.png" alt="Global Pay Logo" className="w-10 h-10 sm:w-20 sm:h-20 rounded-full" />
                     </div>
                     <div>
-                        <h1 className="text-xl sm:text-2xl font-bold text-theme ">GLOBAL PAY Co., Ltd.</h1>
+                        <h1 className="text-sm sm:text-2xl font-bold text-theme ">GLOBAL PAY Co., Ltd.</h1>
                         <p className="text-xs sm:text-sm text-gray-600 ">Empowering Your Global Opportunities</p>
                     </div>
                 </div>

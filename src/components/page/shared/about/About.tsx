@@ -7,11 +7,11 @@ import WhatWeDO from './WhatWeDo';
 const AboutUs: React.FC = () => {
     return (
         <div
-            className="box-container py-[64px] flex flex-col gap-5"
+            className="box-container py-[64px] flex flex-col gap-5 overflow-x-hidden"
         >
             <motion.h4
                 className="text-theme font-semibold mb-2 text-left text-4xl"
-                initial={{ opacity: 0, x: -400 }}
+                initial={{ opacity: 0, x: -200 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.9, delay: 0.4 }}
             >
@@ -22,7 +22,7 @@ const AboutUs: React.FC = () => {
                 {/* Text Section */}
                 <motion.div
                     className="w-full flex flex-col gap-5"
-                    initial={{ opacity: 0, x: -400 }}
+                    initial={{ opacity: 0, x: -200 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.9, delay: 0.4 }}
                 >
@@ -82,7 +82,7 @@ const AboutUs: React.FC = () => {
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, x: 400 }}
+                    initial={{ opacity: 0, x: 200 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.9, delay: 0.4 }}
                 >
