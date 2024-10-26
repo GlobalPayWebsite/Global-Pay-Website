@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useTranslation } from "react-i18next";
 import { KeyboardEvent, useEffect } from "react";

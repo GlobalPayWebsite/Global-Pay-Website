@@ -3,7 +3,7 @@ import React from 'react';
 const UseOfsite: React.FC = () => {
     return (
         <div className="box-container py-[64px]">
-            <div className='flex flex-col gap-10'>
+            <div className='flex flex-col gap-10 max-w-[800px]'>
                 <section className='flex flex-col gap-1'>
                     <h2 className="text-3xl font-semibold text-left text-theme">サイトのご利用について</h2>
                     <p className="text-sm text-left">

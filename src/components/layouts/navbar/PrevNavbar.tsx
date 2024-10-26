@@ -76,9 +76,7 @@ const Navbar: React.FC = () => {
                   />
                 ) : (
                   <div key={link.name}>
-                    <Link href={link.href}
-                      className={`${pathname == link.href ? "nav_link_active" : "nav_link"} py-1`}
-                    >
+                    <Link href={link.href} className={`${pathname == link.href ? "bg-theme text-white" : ""} py-1 px-4 rounded-full hover:underline`}>
                       {toggleLanguage({
                         i18Txt: link.name,
                       })}

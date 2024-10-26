@@ -2,71 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const usefulLinks = [
-    {
-        name: 'Home',
-        href: '/'
-    },
-    {
-        name: 'About Us',
-        href: '/about-us'
-    },
-    {
-        name: 'Recruitment Service',
-        href: '/service/recruitment'
-    },
-    {
-        name: 'Other Services',
-        href: '/service/others'
-    },
-    {
-        name: 'Contact Us',
-        href: '/contact'
-    },
-    {
-        name: 'Company Profile',
-        href: '/companyprofile'
-    }
-]
-
-const ourServices = [
-    {
-        name: 'Recruitment',
-        href: '/service/recruitment'
-    },
-    {
-        name: 'SSW',
-        href: '/service/others'
-    },
-    {
-        name: 'Real Estate Consultant',
-        href: '/service/others'
-    },
-    {
-        name: 'Educational Consultant',
-        href: '/service/others'
-    },
-    {
-        name: 'Travel Consultant',
-        href: '/service/others'
-    }
-]
-
-const legals = [
-    {
-        name: 'Privacy Policy',
-        href: '/privacy-policy'
-    },
-    {
-        name: 'Disclaimer',
-        href: '/disclaimer'
-    },
-    {
-        name: 'Use of This Site',
-        href: '/use-of-site'
-    }
-]
-
 const Footer: React.FC = () => {
     return (
         <footer className="bg-white box-container pt-[32px] border-t text-dark">
@@ -105,11 +40,12 @@ const Footer: React.FC = () => {
                         <div>
                             <h4 className="font-semibold text-lg mb-2 text-[20px]">Useful Links</h4>
                             <ul className="text-[16px] space-y-2">
-                                {usefulLinks.map((link) => (
-                                    <li key={link.name}>
-                                        <Link href={link.href} className="nav_link">{link.name}</Link>
-                                    </li>
-                                ))}
+                                <li><Link href="/" className="hover:underline text-[#555555]">Home</Link></li>
+                                <li><Link href="/about-us" className="hover:underline text-[#555555]">About Us</Link></li>
+                                <li><Link href="/service/recruitment" className="hover:underline text-[#555555]">Recruitment Service</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Other Services</Link></li>
+                                <li><Link href="/contact" className="hover:underline text-[#555555]">Contact Us</Link></li>
+                                <li><Link href="/companyprofile" className="hover:underline text-[#555555]">Company Profile</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -118,11 +54,11 @@ const Footer: React.FC = () => {
                         <div>
                             <h4 className="font-semibold text-lg mb-2 text-[20px]">Our Services</h4>
                             <ul className="text-[16px] space-y-2">
-                                {ourServices.map((link) => (
-                                    <li key={link.name}>
-                                        <Link href={link.href} className="nav_link">{link.name}</Link>
-                                    </li>
-                                ))}
+                                <li><Link href="/service/recruitment" className="hover:underline text-[#555555]">Recruitment</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">SSW</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Real Estate Consultant</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Educational Consultant</Link></li>
+                                <li><Link href="/service/others" className="hover:underline text-[#555555]">Travel Consultant</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -131,12 +67,9 @@ const Footer: React.FC = () => {
                         <div>
                             <h4 className="font-semibold text-lg mb-2 text-[20px]">Legal</h4>
                             <ul className="text-[16px] space-y-2">
-                                {legals.map((link) => (
-                                    <li key={link.name}>
-                                        <Link href={link.href} className="nav_link">{link.name}</Link>
-                                    </li>
-                                ))}
-                              
+                                <li><Link href="/privacy-policy" className="hover:underline text-[#555555]">Privacy Policy</Link></li>
+                                <li><Link href="/disclaimer" className="hover:underline text-[#555555]">Disclaimer</Link></li>
+                                <li><Link href="/use-of-site" className="hover:underline text-[#555555]">Use of This Site</Link></li>
                             </ul>
                             <div className="mt-4">
                                 <h5 className="font-bold text-[16px] mb-2">Follow Us</h5>

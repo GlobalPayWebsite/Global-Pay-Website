@@ -5,7 +5,7 @@ const Disclaimer: React.FC = () => {
     <div className="box-container py-[64px]">
 
 
-      <div className='flex flex-col gap-10'>
+      <div className='flex flex-col gap-10 max-w-[800px]'>
 
 
         <section className='flex flex-col gap-1'>

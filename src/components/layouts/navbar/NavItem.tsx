@@ -48,12 +48,13 @@ const NavLinkWithDropdown: React.FC<NavLinkWithDropdownProps> = ({ link }) => {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isOpen]);
 
 
     return (
         <div className="relative" ref={dropdownRef}>
-            <button  className={`${pathname.includes(link.href) ? "bg-theme text-white" : ""} py-1 px-4 rounded-full flex items-center gap-2`} onClick={toggleDropdown}>
+            <button  className={`${pathname.includes(link.href) ? "nav_link_active" : "nav_link"} py-1 rounded-full flex items-center gap-2`} onClick={toggleDropdown}>
                 {t(link.name)}
                 {link.dropdownLinks && (
                     <span className="ml-2">

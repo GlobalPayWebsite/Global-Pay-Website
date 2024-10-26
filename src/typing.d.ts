@@ -16,3 +16,6 @@ export interface DetailType {
     extraImage: string;
     _createdAt: string;
 }
+
+
+export type PageType = "news" | "recruitment" | "ssw" | "educational" | "travel" | "realstate" | "details" | "others";

@@ -2,7 +2,6 @@ import { DetailType } from '@/typing';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { newsList } from './News';
 import { motion } from 'framer-motion';
 
 
@@ -19,12 +18,9 @@ const NewsCard: React.FC<NewsCardProps> = ({ details }) => {
         >
             <Link
                 href={{
-                    pathname: `/details`,
+                    pathname: `/news`,
                     query: {
-                        item: JSON.stringify({
-                            details,
-                            detailsList: newsList
-                        })
+                        id: details?._id || ""
                     },
                 }}
                 className="w-full flex flex-col">

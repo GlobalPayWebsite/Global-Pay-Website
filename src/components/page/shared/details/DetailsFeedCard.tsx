@@ -1,16 +1,16 @@
 "use client";
 
-import { DetailType } from '@/typing';
+import { DetailType, PageType } from '@/typing';
 import { useToggleLanguageConversion } from '@/utils/hooks/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 interface DetailsFeedCardProps {
     details: DetailType;
-    detailsList: DetailType[];
+    pageType: PageType;
 }
 
-const DetailsFeedCard = ({ details, detailsList }: DetailsFeedCardProps) => {
+const DetailsFeedCard = ({ details, pageType }: DetailsFeedCardProps) => {
     const { t } = useTranslation();
     const { toggleLanguage } = useToggleLanguageConversion();
     return (
@@ -26,15 +26,15 @@ const DetailsFeedCard = ({ details, detailsList }: DetailsFeedCardProps) => {
                         japTxt: details?.title_jp || ""
                     }) || ""}</h2>
                     <Link href={{
-                        pathname: `/details`, query: {
-                            item: JSON.stringify({ details, detailsList })
+                        pathname: `/${pageType}`, query: {
+                            id: details?._id || ""
                         }
                     }}>
                         <button className="text-black border gap-2 border-blue-500 hover:border-green-500 rounded-md px-5 py-1 text-sm">
                             <span>{t("Read More")}</span>
                         </button>
                     </Link>
-                    <div className='text-yellow-600'>{details?._createdAt?.toString() || ""}</div>
+                    {details?.isNews && <div className='text-yellow-600'>{details?._createdAt?.toString() || ""}</div>}
                 </div>
             </div>
         </div>

@@ -3,18 +3,18 @@ import { useToggleLanguageConversion } from '@/utils/hooks/hooks';
 import Image from 'next/image'
 import React from 'react'
 import IntroCard from './InfoCard';
-import { DetailType } from '@/typing';
+import { DetailType, PageType } from '@/typing';
 import DetailsFeedCard from './DetailsFeedCard';
 
 
 
 interface DetailsProps {
-    details: DetailType,
-    detailsList: DetailType[]
+    details: DetailType;
+    detailsList: DetailType[];
+    pageType: PageType;
 }
-const Details = ({ details, detailsList }: DetailsProps) => {
+const Details = ({ details, detailsList, pageType }: DetailsProps) => {
     const { toggleLanguage } = useToggleLanguageConversion();
-    console.log("detailsList", detailsList)
     return (
         <>
             <section className='box-container py-[64px]'>
@@ -90,7 +90,7 @@ const Details = ({ details, detailsList }: DetailsProps) => {
                                 <DetailsFeedCard
                                     key={item?._id?.toString()}
                                     details={item}
-                                    detailsList={detailsList}
+                                    pageType={pageType}
                                 />
                             ))}
                         </div>

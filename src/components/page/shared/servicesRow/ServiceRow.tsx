@@ -3,18 +3,18 @@
 import React from 'react';
 import "./card.css";
 import Image from 'next/image';
-import { DetailType } from '@/typing';
+import { DetailType, PageType } from '@/typing';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 interface ServiceCardProps {
     index: number;
     details: DetailType;
-    detailsList: DetailType[];
     length?: number;
+    pageType: PageType;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ index, details, detailsList, length = 0 }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ index, details, pageType, length = 0 }) => {
     const initial = index % 2 == 1 ? { opacity: 0, x: 100 } : { opacity: 0, x: -100 };
     const whileInView = index % 2 == 1 ? { opacity: 1, x: 0 } : { opacity: 1, x: 0 };
     return (
@@ -27,12 +27,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, details, detailsList, 
         >
             <Link
                 href={{
-                    pathname: `/details`,
+                    pathname: `/${pageType}`,
                     query: {
-                        item: JSON.stringify({
-                            details,
-                            detailsList
-                        })
+                        id: details?._id || ""
                     },
                 }}
                 className={`relative w-full h-full mb-10 projcard rounded-lg bg-white group border-gray-300  hover:-translate-y-1 transition-all ease-in-out`}>
@@ -63,9 +60,10 @@ interface ServiceRowProps {
     description: string;
     serviceData: DetailType[];
     bg?: boolean;
+    pageType: PageType;
 }
 
-const ServiceRow: React.FC<ServiceRowProps> = ({ title, description, serviceData, bg = false }) => {
+const ServiceRow: React.FC<ServiceRowProps> = ({ title, description, serviceData, pageType, bg = false }) => {
     return (
         <div className={`flex flex-col box-container py-[64px] overflow-x-hidden ${bg && "bg-background"}`}>
             <motion.div
@@ -85,7 +83,7 @@ const ServiceRow: React.FC<ServiceRowProps> = ({ title, description, serviceData
                         key={index}
                         index={index}
                         details={item}
-                        detailsList={serviceData}
+                        pageType={pageType}
                         length={serviceData?.length || 0}
                     />
                 ))}

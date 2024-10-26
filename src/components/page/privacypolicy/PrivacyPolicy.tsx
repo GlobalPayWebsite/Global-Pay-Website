@@ -4,8 +4,7 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <div className="box-container py-[64px]">
 
-
-      <div className='flex flex-col gap-10'>
+      <div className='flex flex-col gap-10 max-w-[800px]'>
         <section className='flex flex-col gap-1'>
           <h1 className="text-3xl font-semibold text-left text-theme">Privacy Policy</h1>
           <p className="text-sm text-left">
