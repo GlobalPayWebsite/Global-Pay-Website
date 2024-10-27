@@ -20,11 +20,13 @@ const DetailsFeedCard = ({ details, pageType }: DetailsFeedCardProps) => {
                     <Image unoptimized src={details?.image || "/assets/details1.jpg"} height={200} width={200} className='w-full sm:max-w-[250px] sm:max-h-[150px]' alt="details1" />
                 </div>
                 <div className='flex flex-col gap-3 flex-1 w-full'>
-                    {/* <h1 className={`text-black]`}>{sub_heading || "Bussiness | Consultant"}</h1> */}
-                    <h2 className='text-sm sm:text-xl xl:text-sm text-gray-600'>{toggleLanguage({
-                        engTxt: details?.title || "",
-                        japTxt: details?.title_jp || ""
-                    }) || ""}</h2>
+                    <div>
+                        <h2 className='text-md sm:text-xl xl:text-sm font-semibold'>{toggleLanguage({
+                            engTxt: details?.title || "",
+                            japTxt: details?.title_jp || ""
+                        }) || ""}</h2>
+                        {details?.subtitle && <p className='text-gray-500 text-xs'>{details?.subtitle}</p>}
+                    </div>
                     <Link href={{
                         pathname: `/${pageType}`, query: {
                             id: details?._id || ""

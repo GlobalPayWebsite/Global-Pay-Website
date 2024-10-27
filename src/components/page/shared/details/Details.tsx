@@ -21,18 +21,17 @@ const Details = ({ details, detailsList, pageType }: DetailsProps) => {
                 <div className={`flex flex-col lg:flex-row items-start justify-center gap-10`}>
                     <div className={`w-full flex-1`}>
                         <div className='pb-5'>
-                            <div className='flex flex-col justify-center gap-5'>
+                            <div className='flex flex-col justify-center gap-1'>
                                 <h2 style={{ margin: 0 }} className='my-2 text-4xl font-semibold'>
                                     {toggleLanguage({ engTxt: details?.title, japTxt: details?.title_jp }) || ""}
                                 </h2>
-                                {/* <p className='text-gray-500'>Amidst the turmoil, Elon Musk-owned microblogging platform Twitter might soon introduce more features that are just limited to its Blue subscribers. According to reports, Twitter Blue paid subscribers will soon be able to hide the like button.......</p> */}
+                                {details?.subtitle && <p className='text-gray-500'>{details?.subtitle}</p>}
                             </div>
-                            <div className='mt-5 flex items-start justify-between gap-5'>
+                            <div className='mt-5 flex flex-col items-start justify-between gap-5'>
                                 <IntroCard showDate={details?.isNews} date={details?._createdAt?.toString() || ""} title={toggleLanguage({
                                     engTxt: details?.category || "",
                                     japTxt: details?.category_jp || ""
                                 }) as string || ""} />
-                                {/* <h1 className={`text-[${themeColor}] whitespace-nowrap`}>{blog?.sub_heading}</h1> */}
                             </div>
                         </div>
                         <div className='w-full'>
