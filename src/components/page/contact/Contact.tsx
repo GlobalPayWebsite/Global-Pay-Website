@@ -32,6 +32,19 @@ const services = [
             </div>
         ),
     },
+    {
+        icon: <i className="fa-solid fa-business-time" />,
+        title: "Bussiness Hour",
+        description: (
+            <div className='flex-row items-center gap-2'>
+                <div className='items-center gap-1'>
+                    <div>Monday - Friday</div>
+                    <div>9:00 am - 7:00 pm</div>
+                    <div>Saturday & Sunday (Closed)</div>
+                </div>
+            </div>
+        ),
+    }
 ];
 
 
@@ -43,7 +56,7 @@ const Contact = () => {
     if (!mounted) return null;
     return (
         <div className='box-container py-[64px] flex flex-col gap-5'>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
                 {services.map((service, index) => (
                     <motion.div
                         key={index}
